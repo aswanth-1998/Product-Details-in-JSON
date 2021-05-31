@@ -1,0 +1,31 @@
+<html>
+<body>
+    <h1>Product Details</h1>
+    <table id = "table">
+   Name:
+   <input id = "name"><br>
+    Price:
+    <input id = "price" type = "number"><br>
+    Available quantity
+    <input id = "availableQuantity" type = "number"><br>
+    <button id = "convertToJSON" onclick = "json()">Convert to JSON</button>
+    </table>
+    <div id = "jsonData">
+        
+    </div>
+    </body>
+  
+  <script>
+        function json()
+        {
+  var a = document.getElementById("name").value;       
+    var b = document.getElementById("price").value;
+    var c = document.getElementById("availableQuantity").value;
+
+var obj = { Name: a, Price: b, Availablequantity : c };
+    var myJSON = JSON.stringify(obj);    
+      document.getElementById("jsonData").innerHTML = myJSON;  
+            
+        }
+</script>
+</html>
